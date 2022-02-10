@@ -217,11 +217,11 @@ if(NOT APPLE)
     list(APPEND SMDATA_ARCH_LIGHTS_SRC
                 "arch/Lights/LightsDriver_Win32Serial.cpp"
                 "arch/Lights/LightsDriver_Win32Parallel.cpp"
-                "arch/Lights/LightsDriver_PacDrive.cpp")
+                "arch/Lights/LightsDriver_Win32_PacDrive.cpp")
     list(APPEND SMDATA_ARCH_LIGHTS_HPP
                 "arch/Lights/LightsDriver_Win32Parallel.h"
                 "arch/Lights/LightsDriver_Win32Serial.h"
-                "arch/Lights/LightsDriver_PacDrive.cpp")
+                "arch/Lights/LightsDriver_Win32_PacDrive.cpp")
     if(WITH_MINIMAID)
       list(APPEND SMDATA_ARCH_LIGHTS_SRC
                   "arch/Lights/LightsDriver_Win32Minimaid.cpp")
@@ -238,7 +238,8 @@ if(NOT APPLE)
                   "arch/Lights/LightsDriver_Linux_PIUIOBTN_Leds.cpp"
                   "arch/Lights/LightsDriver_Linux_ITGIO.cpp"
                   "arch/Lights/LightsDriver_Linux_stac.cpp"
-                  "arch/Lights/LightsDriver_LinuxWeedTech.cpp")
+                  "arch/Lights/LightsDriver_LinuxWeedTech.cpp"
+                  "arch/Lights/LightsDriver_Linux_PacDrive.h")
       list(APPEND SMDATA_ARCH_LIGHTS_HPP
                   "arch/Lights/LightsDriver_Linux_Leds.h"
                   "arch/Lights/LightsDriver_Linux_PIUIO.h"
@@ -246,7 +247,8 @@ if(NOT APPLE)
                   "arch/Lights/LightsDriver_Linux_PIUIOBTN_Leds.h"
                   "arch/Lights/LightsDriver_Linux_ITGIO.h"
                   "arch/Lights/LightsDriver_Linux_stac.h"
-                  "arch/Lights/LightsDriver_LinuxWeedTech.h")
+                  "arch/Lights/LightsDriver_LinuxWeedTech.h"
+                  "arch/Lights/LightsDriver_Linux_PacDrive.h")
       if(WITH_PARALLEL_PORT)
         list(APPEND SMDATA_ARCH_LIGHTS_SRC
                     "arch/Lights/LightsDriver_LinuxParallel.cpp")
